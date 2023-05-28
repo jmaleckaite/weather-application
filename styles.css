@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+  }
+
+  .container {
+    scroll-snap-type: x mandatory;
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    color: white;
+  }
+
+  .child {
+    scroll-snap-align: start;
+    text-align: center;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover !important;
+    height: 100vh;
+    flex: 0 0 100vw;
+  }
+
+  .background-card-1 {
+    background: linear-gradient(rgb(225 225 225 / 60%), rgba(0, 0, 0, 0.8)), url(./images/london.jpg) no-repeat center center fixed;
+  }
+
+  .background-card-2 {
+    background: linear-gradient(rgb(229 156 156 / 40%), rgba(0, 0, 0, 0.5)), url(./images/milan.jpg) no-repeat center center fixed;
+  }
+
+  .background-card-3 {
+    background: linear-gradient(rgb(123 123 123 / 60%), rgba(0, 0, 0, 0.8)), url(./images/bangkok.jpg) no-repeat center center fixed;
+  }
+
+  .background-card-4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./images/los_angeles.jpg) no-repeat center center fixed;
+  }
+
+  .background-card-5 {
+    background: linear-gradient(rgb(72 70 111 / 60%), rgb(158 109 109 / 30%)), url(./images/nairobi.jpg) no-repeat center center fixed;
+  }
+
+  button {
+    border: none;
+    background: none;
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding-top: 40px;
+  }
+
+  .pagination-number {
+    color: white;
+    font-size: 0.7rem;
+    cursor: pointer;
+  }
+
+  .location-title {
+    margin-top: 30px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .description-title {
+    font-size: 1rem;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  .temp-title {
+    font-size: 7rem;
+    font-weight: 700;
+    margin-left: 25px;
+  }
+
+  .temp-minmax-title {
+    font-size: 1.3rem;
+  }
+
+  .forecast-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 130px;
+    min-width: 0%;
+    padding: 0 5px;
+  }
+
+  .card {
+    font-size: 1rem;
+    flex: 0 0 13.8%;
+  }
+
+  .forecast-date {
+    text-transform: uppercase;
+  }
+
+  .forecast-icon {
+    height: 35px;
+    width: 25px;
+  }
+
+  .forecast-min-max {
+    font-size: 0.8rem;
+  }
+
+  svg {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+
+  .wave-container {
+    display: inline-block;
+    width: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  /* Desktop screens */
+  @media only screen and (min-width: 768px) {
+    .card {
+      font-size: 1.2rem;
+    }
+
+    .forecast-icon {
+      margin-top: 5px;
+      height: 55px;
+      width: 75px;
+    }
+
+    .forecast-min-max {
+      font-size: 1rem;
+    }
+
+    #svgWave {
+      display: none;
+    }
+
+    svg {
+      transform:rotate(0deg); transition: 0.3s;
+    }
+    
+    path {
+      transform:translate(0, 0px); opacity:1;
+    }
+  }
